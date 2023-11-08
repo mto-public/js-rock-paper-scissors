@@ -1,36 +1,51 @@
-function calculator() {
-    let firstValue  = "", secondValue = "";
-    let operator = "";
-    let result = 0;
-    let operatorName = "";
+// 1. u rentre value
+// 2. pc choisie son value
+// .. algo comparer
+// 4. gagner / perdu/ egalité
 
-    while(firstValue === "" || secondValue === "") {
-        alert("Plz enter the values.");
-        firstValue = prompt("first value = ?");
-        secondValue = prompt("second value = ?");      
-        operator = prompt("opérator = ?");      
+function emilli() {
+    let utilisateur_choix = "";
+    let pc_choix = "";
+    const choix = ["pierre", "papier", "ciseaux"];
+    let result = "pas définie";
+
+    while( utilisateur_choix === "" || !choix.includes(utilisateur_choix) ) {
+        utilisateur_choix = prompt("Faitez un choix ?");
     }
-    firstValue = parseFloat(firstValue);
-    secondValue = parseFloat(secondValue);
+   
+    pc_choix = choix[Math.floor(Math.random() * 3)];
+    console.log(`Utilisateur choix: ${utilisateur_choix}`);
+    console.log(`Pc choix: ${pc_choix}`);
 
-    if(operator === "+") {
-        operatorName = "addition";
-        result = firstValue + secondValue;
-    } else if(operator === "-") {
-        operatorName = "sustraction";
-        result = firstValue - secondValue;
-    } else if(operator === "*") {
-        operatorName = "multiple";
-        result = firstValue * secondValue;
-    } else if(operator === "/") {
-        operatorName = "division";
-        result = firstValue / secondValue;
-    } else {
-        console.log("opération non valide");
+    if(utilisateur_choix === pc_choix) {
+        result = "égalité";
+        // console.log(result);
+        alert(result);
         return;
+    } 
+
+    if(utilisateur_choix === "pierre") {
+        if(pc_choix === "papier") {
+            result = "perdu";
+        } else {
+            result = "gagné";
+        }
+    } else if(utilisateur_choix === "papier") {
+        if(pc_choix === "pierre") {
+            result = "gagné";
+        } else {
+            result = "perdu";
+        }
+    } else {
+        if(pc_choix === "pierre") {
+            result = "perdu";
+        } else {
+            result = "gagné";
+        }
     }
 
-    console.log(`${operatorName} : ${result}`);
+    // console.log(result);
+    alert(result);
 }
 
-calculator();
+emilli();
