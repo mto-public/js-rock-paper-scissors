@@ -9,4 +9,51 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+
+#game {
+    background-color: bisque;
+    padding: 1em;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* #resultatFinal {
+    color: green;
+}
+#resultatFinal.winner {
+    color: green;
+}
+#resultatFinal.loser {
+    color: red;
+} */
+
+h1 {
+    color: brown;
+}
+
+.choix , #scores {
+    display: flex;
+    justify-content: space-between;
+}
+
+.utilisateur-choix {
+    margin: 2rem 0;
+}
+
+button {
+    padding: 1em;
+    margin: 0 1em;
+    border: 0;
+    border-radius: 4px;
+    /* background-color: ; */
+    background: none;
+
+    color: white;
+}
+
+button i {
+    font-size: xx-large;
+    color: brown;
 }

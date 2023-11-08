@@ -3,17 +3,36 @@
   <head>
     <title>Simple calculator</title>
     <link rel="stylesheet" href="css/style.css">
+
   </head>
   <body>
 
     <main>
-      <div class="utilisateur-choix">
-        <button data-value="pierre">Pierre</button>
-        <button data-value="papier">Papier</button>
-        <button data-value="ciseaux">Ciseaux</button>
+      <h1 id="resultatFinal"></h1>
+
+      <div id="game">
+        <h1 id="resultat"></h1>
+
+        <div class="choix">
+          <div class="utilisateur_choix"></div>
+          <div class="pc_choix"></div>
+        </div>
+  
+        <div class="utilisateur-choix">
+          <button data-value="pierre"><i class="fa-solid fa-hand-back-fist"></i></button>
+          <button data-value="papier"><i class="fa-solid fa-hand"></i></button>
+          <button data-value="ciseaux"><i class="fa-solid fa-hand-scissors"></i></button>
+        </div>
+  
+        <div id="scores">
+          <div id="user_score"></div>
+          <div id="pc_score"></div>
+        </div>
       </div>
+
     </main>
 
+    <script src="https://kit.fontawesome.com/09d169dcaf.js" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
