@@ -1,17 +1,24 @@
-// 1. u rentre value
-// 2. pc choisie son value
-// .. algo comparer
-// 4. gagner / perdu/ egalité
+let buttons = document.getElementsByTagName("button");
 
-function emilli() {
-    let utilisateur_choix = "";
+for(let button of buttons) {
+    // Add a click event listener to the button
+    button.addEventListener("click", function() {
+        // Code to be executed when the button is clicked
+        // alert(this.getAttribute('data-value'));
+        emilli(this.getAttribute('data-value')) ;
+    });
+}
+
+
+function emilli(utilisateur_choix) {
+    // let utilisateur_choix = "";
     let pc_choix = "";
     const choix = ["pierre", "papier", "ciseaux"];
     let result = "pas définie";
 
-    while( utilisateur_choix === "" || !choix.includes(utilisateur_choix) ) {
-        utilisateur_choix = prompt("Faitez un choix ?");
-    }
+    // while( utilisateur_choix === "" || !choix.includes(utilisateur_choix) ) {
+    //     utilisateur_choix = prompt("Faitez un choix ?");
+    // }
    
     pc_choix = choix[Math.floor(Math.random() * 3)];
     console.log(`Utilisateur choix: ${utilisateur_choix}`);
@@ -48,4 +55,8 @@ function emilli() {
     alert(result);
 }
 
-emilli();
+// emilli();
+
+// =====================================================
+
+
